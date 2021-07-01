@@ -1,0 +1,126 @@
+$desktop: 900px;
+$desktop-width: 1080px;
+$tablet: 767px;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+$btn-green: #6ca200;
+$green-hvr: #5eaa2f;
+$yellow: #fce35f;
+$grey-hvr: #ebebeb;
+$grey-background: #eaeaea;
+$grey-border: #cdcdcd;
+$blue: #99e8d3;
+$text: #444;
+$black: #2d333b;
+$white: #ffffff;
+$orange: #fec846;
+$programm-green: #95bf41;
+$intro: #95ccd7;
+
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    font-family: "Europe", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    color: $text;
+    counter-reset: why;
+    text-align: left;
+    background-color: #ffffff;
+    min-height: 100vh;
+
+
+  }
+  html {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .visual-hidden:not(:focus):not(:active),
+  input[type="checkbox"].visual-hidden,
+  input[type="radio"].visual-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  input, textarea {
+    border: 1px solid #d5d6d7;
+    background-color: #fff;
+    padding: 18px 24px 19px;
+    font-size: 14px;
+    font-weight: 300;
+    vertical-align: top;
+    font-family: "Europe","Arial",sans-serif;
+    transition: all .3s ease-in-out;
+    &:hover {
+      border-color: #adadad;
+      transition: all .3s ease-in-out;
+      z-index: 1;
+      position: relative;
+    }
+  }
+  input[type="checkbox"], input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+button,
+button:active,
+button:focus {
+    outline: none;
+}
+  .wrapper {
+    padding: 0 8%;
+    margin: auto;
+    overflow: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
+position:relative;
+width:100%;
+
+height:auto;
+}
+
+@media (min-width:$desktop) {
+    body {
+    font-size: 16px;
+  }
+    .wrapper {
+    max-width: $desktop-width;
+    padding: 0;
+  }
+}
