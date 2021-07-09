@@ -1,0 +1,165 @@
+.contacts-block {
+
+  .contacts-block__content {
+    padding-top: 57px;
+    padding-bottom: 96px;
+  }
+
+
+  .contacts-block__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 96px;
+  }
+
+
+  .contacts-block__contacts {
+    margin-right: 88px;
+  }
+
+  .contacts-block__form {
+    flex: 0 0 540px;
+  }
+
+
+  .contacts-block__map-wrapper {
+    height: 480px;
+    max-height: 75vh;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.contacts {
+  letter-spacing: 0.04em;
+
+
+  .contacts__image {
+    margin-bottom: 71px;
+  }
+
+
+  .contacts__item {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .contacts__title {
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+
+  .contacts__link {
+    display: block;
+    color: $mainColor12;
+
+    &:hover {
+      color: $mainColor1;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+
+    &--address {
+      address {
+        font-style: normal;
+      }
+    }
+
+    &--phone,
+    &--site,
+    &--email {
+      position: relative;
+      padding-left: 40px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+      }
+
+      &:hover:before {
+        opacity: 1;
+      }
+    }
+
+
+    .contacts__link--phone {
+      &:before {
+        background-image: url("../img/icons/phone_gray.svg");
+      }
+    }
+
+
+    .contacts__link--site {
+      &:before {
+        background-image: url("../img/icons/site_gray.svg");
+      }
+    }
+
+
+    .contacts__link--email {
+      &:before {
+        background-image: url("../img/icons/email_gray.svg");
+      }
+    }
+  }
+}
+
+.contacts-banner {
+  padding: 50px 0;
+  color: $whiteColor;
+  background: url("../img/contacts-banner.svg") center/cover no-repeat;
+
+
+  .contacts-banner__body {
+    max-width: 810px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+  }
+
+
+  .contacts-banner__title {
+    margin-bottom: 16px;
+    font-size: 4.4rem;
+    line-height: 168%;
+  }
+
+
+  .contacts-banner__subtitle {
+    font-size: 2rem;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: $mainColor11;
+  }
+}
+
+.contacts-form {
+  padding: 56px;
+  letter-spacing: 0.04em;
+  background: $whiteColor;
+  box-shadow: $boxShadow3;
+  border-radius: $borderRadius1;
+
+  .contacts-form __title {
+    margin-bottom: 48px;
+    text-transform: uppercase;
+  }
+}
