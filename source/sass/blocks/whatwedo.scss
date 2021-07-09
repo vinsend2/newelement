@@ -1,0 +1,121 @@
+.whatwedo {
+  padding-top: 168px;
+  padding-bottom: 212px;
+
+  .whatwedo__inner {
+    position: relative;
+  }
+
+
+  .whatwedo__title {
+    position: absolute;
+    top: -24px;
+    left: 0;
+  }
+
+
+  .whatwedo__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 860px;
+    margin-left: auto;
+  }
+
+
+  .whatwedo__item {
+    width: calc(50% + -50px);
+
+    &:nth-child(odd):not(:last-child) {
+      margin-right: 100px;
+      margin-top: 256px;
+      margin-bottom: -256px;
+    }
+
+    &:nth-child(even):not(:last-child) {
+      margin-bottom: 100px;
+    }
+
+    &:nth-child(odd):nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.wwd-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px 48px 48px 48px;
+  letter-spacing: 0.05em;
+  border-radius: $borderRadius1;
+  box-shadow: $boxShadow2;
+
+
+  .wwd-card__image-wrapper {
+    display: flex;
+    max-height: 50vh;
+    margin-top: -24px;
+    margin-bottom: 44px;
+  }
+
+
+  .wwd-card__image {
+    width: 100%;
+  }
+
+
+  .wwd-card__title {
+    margin-bottom: 16px;
+  }
+
+
+  .wwd-card__description {
+    margin-bottom: 32px;
+    color: $grayColor1;
+  }
+
+  .wwd-card__link {
+    position: relative;
+    line-height: 1;
+    color: $mainColor4;
+    background-color: transparent;
+    box-shadow: initial;
+  }
+
+.wwd-card__link.btn {
+      padding: 12px 48px 12px 0px;
+      font-size: 1.4rem;
+
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 24px;
+      height: 24px;
+      background: url("../img/icons/arrow-right_blue.svg") center no-repeat;
+    }
+
+    &:hover {
+      color: $whiteColor;
+      background-color: $mainColor4;
+
+      &.btn {
+        padding: 12px 48px 12px 24px;
+      }
+
+      &:before {
+        right: 12px;
+        background-image: url("../img/icons/arrow-right_white.svg");
+      }
+
+      &:after {
+        transition-delay: 0.3s;
+      }
+    }
+  }
+}
+

@@ -1,5 +1,19 @@
-@import"global/fonts.sass";
-@import"global/global.scss";
+
+//Global
+
+@import"global/fonts.scss";
+@import"global/variables.scss";
 @import"global/normalize.sass";
-@import"global/variables.sass";
+@import"global/ress.scss";
+@import"global/global.scss";
+
+//Blocks
+
+@import"blocks/btn.scss";
+@import"blocks/hero.scss";
+@import"blocks/whatwedo.scss";
+@import"blocks/clients.scss";
+@import"blocks/footer.scss";
+@import"blocks/header.scss";
+
 

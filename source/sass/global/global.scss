@@ -1,126 +1,140 @@
-$desktop: 900px;
-$desktop-width: 1080px;
-$tablet: 767px;
+html {
+  font-size: 10px;
 
-$retina-dpi: 144dpi;
-$retina-dppx: 1.5dppx;
 
-$btn-green: #6ca200;
-$green-hvr: #5eaa2f;
-$yellow: #fce35f;
-$grey-hvr: #ebebeb;
-$grey-background: #eaeaea;
-$grey-border: #cdcdcd;
-$blue: #99e8d3;
-$text: #444;
-$black: #2d333b;
-$white: #ffffff;
-$orange: #fec846;
-$programm-green: #95bf41;
-$intro: #95ccd7;
+  &.lock {
+     overflow: hidden;
+  }
+}
 
+.container {
+  width: 100%;
+  max-width: 970px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container1200 {
+  width: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container-wide {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
 
 body {
-    margin: 0;
-    padding: 0;
-    min-width: 320px;
-    font-family: "Europe", "Arial", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    width: 100%;
-    max-width: 100%;
-    overflow: auto;
-    overflow-x: hidden;
-    color: $text;
-    counter-reset: why;
-    text-align: left;
-    background-color: #ffffff;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
+  max-width: 3440px;
+  min-width: 320px;
 
-  }
-  html {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-  a {
-    text-decoration: none;
-  }
+  height: 100%;
+  min-height: 100vh;
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+  margin: 0 auto;
+  overflow-x: hidden;
 
-  .visual-hidden:not(:focus):not(:active),
-  input[type="checkbox"].visual-hidden,
-  input[type="radio"].visual-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
-  input, textarea {
-    border: 1px solid #d5d6d7;
-    background-color: #fff;
-    padding: 18px 24px 19px;
-    font-size: 14px;
-    font-weight: 300;
-    vertical-align: top;
-    font-family: "Europe","Arial",sans-serif;
-    transition: all .3s ease-in-out;
-    &:hover {
-      border-color: #adadad;
-      transition: all .3s ease-in-out;
-      z-index: 1;
-      position: relative;
-    }
-  }
-  input[type="checkbox"], input[type="radio"] {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
+  font-family: $mainFontFamily;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 162%;
+  color: $mainColor1;
+
 }
+
+main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  flex: 0 0 auto;
+}
+
+h1 {
+  font-size: 6.4rem;
+  font-weight: 700;
+  line-height: 116%;
+  letter-spacing: 0.04em;
+}
+
+h2 {
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 128%;
+  letter-spacing: 0.05em;
+  color: $mainColor2;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.05em;
+}
+
+a,
 button,
-button:active,
-button:focus {
-    outline: none;
-}
-  .wrapper {
-    padding: 0 8%;
-    margin: auto;
-    overflow: hidden;
-    max-width: 100%;
-    box-sizing: border-box;
-position:relative;
-width:100%;
-
-height:auto;
+input,
+textarea,
+:before,
+:after {
+  transition: $transition1;
 }
 
-@media (min-width:$desktop) {
-    body {
-    font-size: 16px;
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.text-content {
+  p, ul, ol, table, img {
+     &:not(:last-child) {
+        margin-bottom: 32px;
+     }
   }
-    .wrapper {
-    max-width: $desktop-width;
-    padding: 0;
+
+  ul {
+     list-style: none;
+
+     li {
+        position: relative;
+        padding-left: 20px;
+
+        &:before {
+           content: "";
+           position: absolute;
+           top: 12px;
+           left: 0;
+           width: 12px;
+           height: 1px;
+           background: $mainColor1;
+        }
+     }
+  }
+
+  li:not(:last-child) {
+     margin-bottom: 24px;
   }
 }
+
+
+

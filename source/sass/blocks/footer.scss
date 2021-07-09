@@ -1,0 +1,177 @@
+.footer {
+  padding-right: 7.5vw;
+  background-color: $mainColor4;
+
+  &__bg-wrapper {
+    background-color: $mainColor2;
+  }
+}
+
+.work {
+  &__bg-wrapper {
+
+    padding-top: 91px;
+    border-top-right-radius: 200px;
+    background-color: $mainColor2;
+  }
+
+
+  .work__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 96px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 1px;
+      background-color: $mainColor10;
+    }
+  }
+
+
+  .work__body {
+    max-width: 460px;
+    margin-right: 180px;
+  }
+
+
+  .work__title {
+    margin-bottom: 32px;
+    color: $whiteColor;
+  }
+
+  .work__description {
+    color: $mainColor9;
+  }
+
+
+  .work__btn {
+    padding-left: 74px;
+    padding-right: 74px;
+  }
+}
+
+.footer {
+  color: $whiteColor;
+
+  .footer__bg-wrapper {
+    padding-top: 97px;
+    padding-bottom: 64px;
+  }
+
+
+  .footer__body {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 64px;
+  }
+
+
+  .footer__info {
+    margin-right: 100px;
+  }
+
+
+  .footer__logo-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+
+
+  .footer__contacts {
+    max-width: 264px;
+  }
+
+
+  .footer__logo {
+    margin-right: 15px;
+  }
+
+
+  .footer__company-name {
+    font-size: 2.8rem;
+    line-height: 164%;
+    letter-spacing: 0.02em;
+  }
+
+  .footer__navigation {
+    display: flex;
+    align-items: flex-start;
+  }
+
+
+  .footer__menu {
+    &:not(:last-child) {
+      margin-right: 77px;
+    }
+  }
+
+  .footer__copyright {
+    color: $mainColor10;
+  }
+}
+
+.footer-contacts {
+
+  .footer-contacts__item {
+    display: flex;
+    align-items: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+
+  .footer-contacts__caption {
+    flex: 0 0 auto;
+    margin-right: 16px;
+  }
+
+  .footer-contacts__link {
+    color: $whiteColor;
+
+    address {
+      font-style: normal;
+    }
+
+    &:hover {
+      color: $mainColor5;
+    }
+  }
+}
+
+.footer-menu {
+
+  .footer-menu__item {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &:first-child {
+      margin-bottom: 32px;
+
+      .footer-menu__link {
+        font-size: 2rem;
+        line-height: 150%;
+      }
+    }
+  }
+
+
+  .footer-menu__link {
+    letter-spacing: 0.05em;
+    color: $whiteColor;
+
+    &:hover {
+      color: $mainColor5;
+    }
+  }
+}

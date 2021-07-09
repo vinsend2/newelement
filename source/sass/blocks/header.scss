@@ -1,0 +1,30 @@
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 48px 0;
+  transition: $transition1;
+
+.header__inner {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+  }
+
+.header__logo  {
+     position: relative;
+     z-index: 20;
+  }
+}
+
+.logo {
+  .logo__link {
+     display: flex;
+
+     &:hover {
+        transform: scale(1.05);
+     }
+  }
+}

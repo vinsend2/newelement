@@ -1,0 +1,21 @@
+.btn {
+  position: relative;
+  overflow: hidden;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 48px;
+
+  text-align: center;
+  white-space: nowrap;
+  color: $whiteColor;
+
+  background: $mainColor4;
+  border-radius: $borderRadius1;
+  box-shadow: $boxShadow1;
+
+  &:hover, :active  {
+    transform: scale(1.02);
+  }
+}

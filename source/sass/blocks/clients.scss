@@ -1,0 +1,66 @@
+.clients {
+  padding-top: 96px;
+  padding-bottom: 125px;
+  background-color: $mainColor4;
+  border-top-left-radius: 200px;
+
+
+.clients__header {
+     display: flex;
+     align-items: flex-start;
+     margin-bottom: 110px;
+  }
+
+
+.clients__title {
+     flex: 0 0 auto;
+     margin-right: 96px;
+     color: $whiteColor;
+  }
+
+
+.clients__subtitle {
+     max-width: 540px;
+     color: $mainColor6;
+  }
+
+
+.clients__list {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+  }
+
+
+.clients__item {
+     &:not(:nth-last-child(-n + 4)) {
+        border-bottom: 1px solid $mainColor7;
+     }
+
+     &:nth-child(4n + 1),
+     &:nth-child(4n + 2),
+     &:nth-child(4n + 3) {
+        border-right: 1px solid $mainColor7;
+     }
+  }
+}
+
+
+.client-card {
+
+  &__link {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 40px 20px;
+     font-size: 2rem;
+     font-weight: 600;
+     line-height: 230%;
+     letter-spacing: 0.02em;
+     text-align: center;
+     color: $grayColor2;
+
+     &:hover {
+        background-color: $mainColor8;
+     }
+  }
+}
