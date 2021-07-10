@@ -1,12 +1,12 @@
 .header {
-  position: fixed;
+  position: sticky;
   z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
   padding: 48px 0;
   transition: $transition1;
-
+}
 .header__inner {
      display: flex;
      justify-content: space-between;
@@ -17,6 +17,20 @@
      position: relative;
      z-index: 20;
   }
+
+.header.fixed {
+  position: fixed;
+  padding: 24px 0;
+  background-color: $whiteColor;
+  box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+  transition: $transition1;
+}
+.menu.fixed > .menu__btn {
+  top: 3vh;
+}
+
+.header--main {
+  position: fixed;
 }
 
 .logo {
