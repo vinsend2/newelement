@@ -31,4 +31,4 @@
 *	### `.travis.yml`
 *	### `package.json`
 ---
-<img src='mockup/vaily.png'>
+<img src='mockup/Afrianska.png'>
