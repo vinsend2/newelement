@@ -52,7 +52,7 @@ gulp.task("images", function () {
   return gulp.src("source/img/**/*.{png,jpg,svg}") // Берем все картинки из source/img
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 5}), // Применяем сжатие картинок
-      imagemin.jpegtran({progressive: true}), // JPEG делаем прогрессивными, т.е. они теперь загружаются постепенно и видны сразу
+      imagemin.mozjpeg({progressive: true}), // JPEG делаем прогрессивными, т.е. они теперь загружаются постепенно и видны сразу
       imagemin.svgo() // Минифицируем svg
     ]))
     .pipe(gulp.dest("source/img")); // Складываем в папку
@@ -142,10 +142,11 @@ gulp.task("clean", function () {
 // Таск для переноса всех статичных файлов
 gulp.task("copy", function () {
   return gulp.src([
+    "source/favicon/**", // Переносим шрифты
     "source/fonts/**/*.{woff,woff2}", // Переносим шрифты
     "source/img/**", // Переносим картинки
     "source/js/**", // Переносим js
-    "source/*.{png,xml,ico,webmanifest,svg,php}" // Переносим фавиконки
+    "source/*.{png,xml,ico,webmanifest,svg,php}" // Переносим остатки контента
   ], {
     base: "source"
   })
@@ -162,6 +163,17 @@ gulp.task("build", gulp.series(
   "sprite",
   "html"
   ));
+
+gulp.task("full-build", gulp.series(
+    "clean",
+    "copy",
+    "css",
+    "scripts",
+    "webpack",
+    "webp",
+    "images",
+    "html"
+    ));
 
 // Таск для отслеживания изменений. Browser Sync
 gulp.task("server", function () {

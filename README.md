@@ -1,4 +1,4 @@
-# Проект «Vaily»
+# Проект «Afrianska»
 
 <table>
   <thead>
