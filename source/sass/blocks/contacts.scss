@@ -1,5 +1,3 @@
-.contacts-block {
-
   .contacts-block__content {
     padding-top: 57px;
     padding-bottom: 96px;
@@ -32,7 +30,7 @@
       height: 100%;
     }
   }
-}
+
 
 .contacts {
   letter-spacing: 0.04em;
@@ -163,3 +161,15 @@
     text-transform: uppercase;
   }
 }
+
+
+@media screen and (max-width: 676px) {
+  .contacts-block__body {
+    display: block;
+  }
+  .contacts-block__contacts {
+    margin-right: 0;
+    margin-bottom: 10vh;
+  }
+}
+

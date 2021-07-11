@@ -7,7 +7,7 @@ html {
   }
 }
 
-.container {
+.wrapper {
   width: 100%;
   max-width: 970px;
   margin: 0 auto;
@@ -15,7 +15,7 @@ html {
   padding-right: 15px;
 }
 
-.container1200 {
+.wrapper1200 {
   width: 100%;
   max-width: 1230px;
   margin: 0 auto;
@@ -23,7 +23,7 @@ html {
   padding-right: 15px;
 }
 
-.container-wide {
+.wrapper-wide {
   width: 100%;
   max-width: 1366px;
   margin: 0 auto;
@@ -135,6 +135,3 @@ a {
      margin-bottom: 24px;
   }
 }
-
-
-

@@ -3,7 +3,7 @@
   padding-bottom: 125px;
   background-color: $mainColor4;
   border-top-left-radius: 200px;
-
+}
 
 .clients__header {
      display: flex;
@@ -42,8 +42,6 @@
         border-right: 1px solid $mainColor7;
      }
   }
-}
-
 
 .client-card {
 
@@ -63,4 +61,68 @@
         background-color: $mainColor8;
      }
   }
+}
+
+@media screen and (max-width: 1200px) {
+  .clients {
+     border-top-left-radius: 140px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .clients {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-top-left-radius: 0;
+    &__header {
+       margin-bottom: 60px;
+    }
+ }
+}
+@media screen and (max-width: 768px) {
+  .clients {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &__header {
+       display: block;
+       margin-bottom: 40px;
+    }
+
+    &__title {
+       margin: 0px 0px 32px 0px;
+    }
+
+    &__list {
+       grid-template-columns: 1fr 1fr;
+    }
+
+    &__item {
+       &:not(:nth-last-child(-n + 4)) {
+          border-bottom: initial;
+       }
+
+       &:nth-child(4n + 1),
+       &:nth-child(4n + 2),
+       &:nth-child(4n + 3) {
+          border-right: initial;
+       }
+
+       &:nth-child(odd) {
+          border-right: 1px solid $mainColor7;
+       }
+
+       &:not(:nth-last-child(-n + 2)) {
+          border-bottom: 1px solid $mainColor7;
+       }
+    }
+ }
+
+ .client-card__link {
+    padding: 24px 16px;
+    font-size: 1.6rem;
+ }
+}
+
+@media screen and (max-width: 476px) {
 }

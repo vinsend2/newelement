@@ -1,6 +1,7 @@
 .whatwedo {
   padding-top: 168px;
   padding-bottom: 212px;
+}
 
   .whatwedo__inner {
     position: relative;
@@ -40,7 +41,7 @@
       margin-bottom: 0;
     }
   }
-}
+
 
 .wwd-card {
   display: flex;
@@ -116,6 +117,22 @@
         transition-delay: 0.3s;
       }
     }
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .whatwedo {
+    padding: 10vh 0;
+  }
+
+  .whatwedo__item {
+    width: 100%;
+  }
+  .whatwedo__item:nth-child(odd):not(:last-child) {
+    margin: 7vh auto;
+  }
+  .whatwedo__item:nth-child(even):not(:last-child) {
+    margin: 0;
   }
 }
 

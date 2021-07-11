@@ -21,6 +21,7 @@ const closeEsc = () =>
     "keyup",
     function (e) {
       if (e.key == `Escape`) {
+        html.classList.remove("lock");
         document.querySelector(".modal").classList.remove("open");
       }
     },
@@ -48,12 +49,17 @@ const initCloseModal = () => {
   });
 };
 
-const overlayClick = () => {
-  document.querySelector(".modal__overlay").addEventListener("click", () => {
-    console.log(123);
-    document.querySelector(".modal").classList.remove("open");
+const overlayClose = () => {
+  const e = document.querySelector(".modal__overlay");
+  e.addEventListener("click", function (event) {
+    if (e == event.target) {
+      html.classList.remove("lock");
+      document.querySelector(".modal").classList.remove("open");
+    }
   });
 };
+
+
 
 window.addEventListener("scroll", () => {
   initFixedHeader();
@@ -65,8 +71,8 @@ document.addEventListener(
     initFixedHeader();
     initFeedbackModal();
     initCloseModal();
+    overlayClose();
     closeEsc();
-    overlayClick();
   },
   false
 );
